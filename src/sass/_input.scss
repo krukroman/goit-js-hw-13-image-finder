@@ -1,0 +1,12 @@
+#search-form {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+
+  & > input {
+    padding: 5px 10px;
+    height: 3rem;
+    width: 400px;
+    margin: 0 auto;
+  }
+}
