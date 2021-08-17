@@ -15,109 +15,22 @@
     <title>Image finder</title>
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-    </form>
+    <div class="form-container">
+      <form class="search-form" id="search-form">
+        <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+        <button class="form-btn" type="submit">
+          <i class="material-icons"> search </i> Search
+        </button>
+      </form>
+    </div>
 
-    <ul class="gallery">
-      <!-- Список <li> с карточками изображений -->
-      <li>
-        <div class="photo-card">
-          <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" alt="" />
+    <div class="gallery-container">
+      <ul class="gallery"></ul>
 
-          <div class="stats">
-            <p class="stats-item">
-              <i class="material-icons">thumb_up</i>
-              1108
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">visibility</i>
-              320321
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">comment</i>
-              129
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">cloud_download</i>
-              176019
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="photo-card">
-          <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" alt="" />
-
-          <div class="stats">
-            <p class="stats-item">
-              <i class="material-icons">thumb_up</i>
-              1108
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">visibility</i>
-              320321
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">comment</i>
-              129
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">cloud_download</i>
-              176019
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="photo-card">
-          <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" alt="" />
-
-          <div class="stats">
-            <p class="stats-item">
-              <i class="material-icons">thumb_up</i>
-              1108
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">visibility</i>
-              320321
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">comment</i>
-              129
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">cloud_download</i>
-              176019
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="photo-card">
-          <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" alt="" />
-
-          <div class="stats">
-            <p class="stats-item">
-              <i class="material-icons">thumb_up</i>
-              1108
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">visibility</i>
-              320321
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">comment</i>
-              129
-            </p>
-            <p class="stats-item">
-              <i class="material-icons">cloud_download</i>
-              176019
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
+      <button class="form-btn loadmore-btn" type="button" disabled>
+        <i class="material-icons"> sync </i>Load more
+      </button>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
