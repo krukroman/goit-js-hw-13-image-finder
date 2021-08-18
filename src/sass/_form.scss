@@ -2,11 +2,12 @@
   margin-top: 50px;
   margin-bottom: 20px;
   display: flex;
+  align-items: center;
   font-size: 2rem;
 
   & > input {
     padding: 5px 10px;
-    height: 3rem;
+    height: 50px;
     width: 500px;
     margin-left: auto;
     margin-right: 20px;
