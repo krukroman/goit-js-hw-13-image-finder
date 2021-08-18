@@ -3,20 +3,19 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 2rem;
 
   & > input {
     padding: 5px 10px;
     height: 50px;
     width: 500px;
-    margin-left: auto;
     margin-right: 20px;
     border-radius: 8px;
   }
 }
 
 .btn {
-  margin-right: auto;
   display: flex;
   align-items: center;
   border-radius: 8px;
