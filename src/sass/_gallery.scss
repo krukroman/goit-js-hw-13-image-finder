@@ -11,9 +11,16 @@
   width: min-content;
 }
 
+.photo-link {
+  &:hover {
+    cursor: zoom-in;
+  }
+}
+
 .photo-card {
   position: relative;
   overflow: hidden;
+  transform: scale(1.03);
 }
 
 .stats {
