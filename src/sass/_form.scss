@@ -14,9 +14,8 @@
   }
 }
 
-.form-btn {
-  padding: 0 15px;
+.btn {
   margin-right: auto;
-  background-color: rgb(83, 192, 255);
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
 }

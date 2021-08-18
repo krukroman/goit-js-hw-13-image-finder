@@ -12,13 +12,19 @@
       referrerpolicy="no-referrer"
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <title>Image finder</title>
   </head>
   <body>
     <div class="form-container">
-      <form class="search-form" id="search-form">
+      <form class="search-form js-search-form" id="search-form">
         <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-        <button class="form-btn" type="submit">
+        <button class="btn btn-primary" type="submit">
           <i class="material-icons"> search </i> Search
         </button>
       </form>
@@ -27,8 +33,13 @@
     <div class="gallery-container">
       <ul class="gallery"></ul>
 
-      <button class="form-btn loadmore-btn" type="button" disabled>
-        <i class="material-icons"> sync </i>Load more
+      <button class="btn btn-primary loadmore-btn is-hidden" type="button" disabled>
+        <span
+          class="spinner-border spinner-border-sm spinner is-hidden"
+          role="status"
+          aria-hidden="true"
+        ></span>
+        <span class="label">Load more</span>
       </button>
     </div>
     <script src="./index.js"></script>

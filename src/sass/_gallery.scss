@@ -50,4 +50,16 @@
   margin: 0 auto;
   height: 3rem;
   font-size: 2rem;
+
+  & > .spinner {
+    margin-right: 10px;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.spinner.is-hidden {
+  display: none;
 }
