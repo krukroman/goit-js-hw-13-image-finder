@@ -94,6 +94,7 @@ function onScroll() {
 
 function openModal(e) {
   e.preventDefault();
+  if (!e.target.classList.contains('js-gallery-img')) return;
   const url = e.target.dataset.source;
   createModal(url);
   onOpenModal();
