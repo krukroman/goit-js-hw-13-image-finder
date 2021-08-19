@@ -73,7 +73,7 @@ async function appendGalleryMarkup() {
 
     if (refs.galleryList.children.length > 12) {
       onTopBtn.show();
-    }
+    } else onTopBtn.hide();
   } catch (error) {
     onPromiseEroor(error);
 
