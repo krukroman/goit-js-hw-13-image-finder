@@ -1,8 +1,14 @@
-{{#each this}}
+{{#each hits}}
   <li class='gallery-item'>
     <a href='' class='photo-link'>
       <div class='photo-card'>
-        <img src='{{webformatURL}}' alt='{{tags}}' data-source='{{largeImageURL}}' />
+        <img
+          src='{{webformatURL}}'
+          alt='{{tags}}'
+          data-source='{{largeImageURL}}'
+          height='280'
+          width='400'
+        />
 
         <div class='stats'>
           <p class='stats-item'>
