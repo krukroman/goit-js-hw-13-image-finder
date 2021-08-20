@@ -4,4 +4,12 @@ import '@pnotify/core/dist/BrightTheme.css';
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile';
 defaultModules.set(PNotifyMobile, {});
 
-export default error;
+export default function notify(msg) {
+  error({
+    text: `${msg}`,
+    type: 'error',
+    animation: 'fade',
+    delay: 3000,
+    autoOpen: 'false',
+  });
+}

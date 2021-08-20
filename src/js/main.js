@@ -33,7 +33,7 @@ function onSearch(e) {
   apiService.query = e.currentTarget.elements.query.value;
 
   if (apiService.query.length === 0 || !apiService.query.trim()) {
-    onEmptyString();
+    notify('Пустая строка. Пожалуйста введите запрос');
     return;
   }
 
@@ -55,13 +55,13 @@ async function appendGalleryMarkup() {
     if (images.total === 0) {
       loadMoreBtn.hide();
 
-      onNotFound();
+      notify('По вашему запросу ничего ненайдено. Введите другой запрос');
 
       return;
     } else if (images.hits.length < 12) {
       loadMoreBtn.hide();
 
-      onItsAll();
+      notify('Это всё, что было найдено по вашему запросу');
     }
     refs.galleryList.insertAdjacentHTML('beforeend', galleryTMP(images));
 
@@ -69,13 +69,13 @@ async function appendGalleryMarkup() {
 
     loadMoreBtn.enable();
 
-    onScroll();
+    scrollToBottom();
 
     if (refs.galleryList.children.length > 12) {
       onTopBtn.show();
     } else onTopBtn.hide();
   } catch (error) {
-    onPromiseEroor(error);
+    notify(`${error.stack}`);
 
     loadMoreBtn.hide();
   }
@@ -85,7 +85,7 @@ function clearGalleryMarkup() {
   refs.galleryList.innerHTML = '';
 }
 
-function onScroll() {
+function scrollToBottom() {
   loadMoreBtn.refs.button.scrollIntoView({
     behavior: 'smooth',
     block: 'end',
@@ -97,62 +97,12 @@ function openModal(e) {
   if (!e.target.classList.contains('js-gallery-img')) return;
   const url = e.target.dataset.source;
   createModal(url);
-  onOpenModal();
+  notify('Для закрытия модального окна нажмите на темную область');
 }
 
 function scrollToTop() {
   refs.searchForm.scrollIntoView({
     behavior: 'smooth',
     block: 'end',
-  });
-}
-
-function onEmptyString() {
-  notify({
-    title: 'Empty string!!!',
-    text: 'Please enter correct search query',
-    type: 'error',
-    delay: 3000,
-  });
-}
-
-function onNotFound() {
-  notify({
-    text: 'По вашему запросу ничего ненайдено. Введите другой запрос',
-    type: 'error',
-    animation: 'fade',
-    delay: 3000,
-    autoOpen: 'false',
-  });
-}
-
-function onItsAll() {
-  notify({
-    text: 'Это всё, что было найдено по вашему запросу',
-    type: 'error',
-    animation: 'fade',
-    delay: 3000,
-    autoOpen: 'false',
-  });
-}
-
-function onPromiseEroor(error) {
-  notify({
-    title: 'Something goes wrong',
-    text: `${error.stack}`,
-    type: 'error',
-    animation: 'fade',
-    delay: 3000,
-    autoOpen: 'false',
-  });
-}
-
-function onOpenModal() {
-  notify({
-    text: `Для закрытия модального окна нажмите на темную область`,
-    type: 'error',
-    animation: 'fade',
-    delay: 3000,
-    autoOpen: 'false',
   });
 }
