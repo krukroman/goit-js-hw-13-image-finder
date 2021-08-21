@@ -92,17 +92,17 @@ function scrollToBottom() {
   });
 }
 
+function scrollToTop() {
+  refs.searchForm.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+  });
+}
+
 function openModal(e) {
   e.preventDefault();
   if (!e.target.classList.contains('js-gallery-img')) return;
   const url = e.target.dataset.source;
   createModal(url);
   notify('Для закрытия модального окна нажмите на темную область');
-}
-
-function scrollToTop() {
-  refs.searchForm.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-  });
 }
