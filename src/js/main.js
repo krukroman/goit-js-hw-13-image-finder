@@ -104,5 +104,4 @@ function openModal(e) {
   if (!e.target.classList.contains('js-gallery-img')) return;
   const url = e.target.dataset.source;
   createModal(url);
-  notify('Для закрытия модального окна нажмите на темную область');
 }

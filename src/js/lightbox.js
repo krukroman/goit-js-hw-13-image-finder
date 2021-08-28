@@ -5,7 +5,7 @@ export default function createModal(url) {
   const instance = basicLightbox.create(`
     
       <div>
-        <img
+        <img class="lightbox__img"
           src="${url}"
           alt=""
         />
