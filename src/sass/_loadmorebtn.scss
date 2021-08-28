@@ -1,7 +1,10 @@
 .load-more-btn {
   margin-right: 20px;
-  height: 3rem;
-  font-size: 2rem;
+
+  @media screen and (max-width: 479px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 
   & > .spinner {
     margin-right: 10px;
