@@ -2,12 +2,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  padding-inline: 15px;
+  padding-inline: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   grid-auto-rows: 290px;
   grid-gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 
 .photo-link {
