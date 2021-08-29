@@ -5,9 +5,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"EGsz":[function(require,module,exports) {
 "use strict";function e(){return{searchForm:document.querySelector("#search-form"),galleryList:document.querySelector(".gallery")}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
 },{}],"vMqs":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;class e{constructor({selector:e,hidden:s=!1}){this.selector=e,this.refs=this.getRefs(this.selector),s&&this.hide()}getRefs(){const e={};return e.button=document.querySelector(this.selector),e.label=e.button.querySelector(".label"),e.spinner=e.button.querySelector(".spinner"),e}enable(){this.refs.button.disabled=!1,this.refs.label.textContent="Load more...",this.refs.spinner.classList.add("is-hidden")}disable(){this.refs.button.disabled=!0,this.refs.label.textContent="...Loading...",this.refs.spinner.classList.remove("is-hidden")}show(){this.refs.button.classList.remove("is-hidden")}hide(){this.refs.button.classList.add("is-hidden")}}exports.default=e;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;class e{constructor({selector:e,hidden:s=!1}){this.refs=this.getRefs(e),s&&this.hide()}getRefs(e){const s={};return s.button=document.querySelector(e),s.label=s.button.querySelector(".label"),s.spinner=s.button.querySelector(".spinner"),s}enable(){this.refs.button.disabled=!1,this.refs.label.textContent="Load more...",this.refs.spinner.classList.add("is-hidden")}disable(){this.refs.button.disabled=!0,this.refs.label.textContent="...Loading...",this.refs.spinner.classList.remove("is-hidden")}show(){this.refs.button.classList.remove("is-hidden")}hide(){this.refs.button.classList.add("is-hidden")}}exports.default=e;
 },{}],"iPk4":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;class e{constructor({selector:e,hidden:s=!1}){this.selector=e,this.refs=this.getRefs(this.selector),s&&this.hide()}getRefs(){const e={};return e.button=document.querySelector(this.selector),e}enable(){this.refs.button.disabled=!1}disable(){this.refs.button.disabled=!0}show(){this.refs.button.classList.remove("is-hidden")}hide(){this.refs.button.classList.add("is-hidden")}}exports.default=e;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;class e{constructor({selector:e,hidden:s=!1}){this.refs=this.getRefs(e),s&&this.hide()}getRefs(e){const s={};return s.button=document.querySelector(e),s}enable(){this.refs.button.disabled=!1}disable(){this.refs.button.disabled=!0}show(){this.refs.button.classList.remove("is-hidden")}hide(){this.refs.button.classList.add("is-hidden")}}exports.default=e;
 },{}],"pAws":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -37,4 +37,4 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{"./apiService":"eQwa","./get-refs":"EGsz","./load-more-btn":"vMqs","./on-top-btn":"iPk4","../templates/gallery.hbs":"YMFI","./lightbox":"bLn9","./notify":"Kazp"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.7803bd49.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.c330764b.js.map
